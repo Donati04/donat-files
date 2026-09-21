@@ -1,0 +1,14 @@
+#!/bin/bash
+
+chosen=$(echo -e "  Power Off\n  Reboot\n  Lock\n󰤄  Suspend\n  Update" | rofi -dmenu -p "❯ " -theme ~/.config/rofi/system.rasi)
+
+case "$chosen" in
+*"Power Off"*) systemctl poweroff ;;
+*"Reboot"*) systemctl reboot ;;
+*"Lock"*) hyprlock ;;
+*"Suspend"*)
+  hyprlock &
+  systemctl suspend
+  ;;
+*"Update"*) sudo pacman -Qe ;;
+esac

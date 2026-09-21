@@ -1,0 +1,83 @@
+configuration {
+    modi: "drun, run, window";
+    drun-display-format: "{name}";
+}
+
+@theme "default"
+
+/* Personalizzazione dello stile */
+* {
+    text-color: #d3c6aa;
+    font: "CaskaydiaMono Nerd Font 14";
+}
+
+window {
+    width: 250px;
+    border: 2px;
+    border-color: #d3c6aa;
+    background-color: #2d353bF2;
+    padding: 20px;
+}
+
+mainbox {
+    children: [inputbar, listview];
+    background-color: "trasparent";
+    spacing: 15px;
+    padding: 0px;
+}
+
+inputbar {
+    children: [prompt, entry];
+    padding: 12px;
+    background-color: #2d353b;
+}
+
+prompt {
+    enabled: true;
+    text-color: #d3c6aa;
+    background-color: "trasparent";
+}
+
+entry {
+    placeholder: "";
+    placeholder-color: #d3c6aa;
+    text-color: #d3c6aa;
+    background-color: "trasparent"; 
+}
+
+listview {
+    lines: 5;
+    columns: 1;
+    spacing: 8px;
+    scrollbar: false;
+    border: 0px;
+    background-color: "trasparent";
+}
+
+element {
+    spacing: -20px;
+    padding: 14px;
+}
+
+element normal.normal{
+    text-color: #d3c6aa;
+    background-color: "trasparent";
+    horizontal-align: 0.0;
+}
+
+element alternate.normal {
+    text-color: #d3c6aa;
+    background-color: "trasparent";
+    horizontal-align: 0.0;
+}
+
+element selected.normal {
+    text-color: #d3c6aa;
+    background-color: #d3c6aa11;
+}
+
+element-text {
+    vertical-align: 0.5;
+    text-color: #d3c6aa;
+    background-color: "trasparent";
+}

@@ -1,0 +1,4 @@
+#!/bin/bash
+
+COMANDO="$*"
+eval "alacritty $COMANDO"

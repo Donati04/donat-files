@@ -1,0 +1,1 @@
+/home/donati/.config/theme/neovim.lua
