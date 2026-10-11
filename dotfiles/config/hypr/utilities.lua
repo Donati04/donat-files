@@ -11,7 +11,7 @@ local mainMod = "SUPER"
 hl.bind(mainMod .. " + SPACE", hl.dsp.exec_cmd("rofi -show drun"))
 hl.bind(mainMod .. " + ESCAPE", hl.dsp.exec_cmd("~/.local/bin/system")) -- menu di sistema (logout/shutdown/reboot/lock)
 
-hl.bind("XF86PowerOff", hl.dsp.exec_cmd("wlogout"))
+hl.bind("XF86PowerOff", hl.dsp.exec_cmd("~/.local/bin/system"))
 
 hl.bind("XF86Calculator", hl.dsp.exec_cmd("gnome-calculator"))
 
@@ -64,7 +64,7 @@ hl.bind(
 )
 
 -- ===== Pannelli di controllo =====
-hl.bind(mainMod .. " + CTRL + A", hl.dsp.exec_cmd("pavucontrol"))
+hl.bind(mainMod .. " + CTRL + A", hl.dsp.exec_cmd("alacritty -e wiremix"))
 hl.bind(mainMod .. " + CTRL + B", hl.dsp.exec_cmd("blueman-manager"))
 hl.bind(mainMod .. " + CTRL + W", hl.dsp.exec_cmd("nm-connection-editor"))
 hl.bind(mainMod .. " + CTRL + T", hl.dsp.exec_cmd("alacritty -e btop"))

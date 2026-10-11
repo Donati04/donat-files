@@ -8,7 +8,6 @@
   "modules-center":["custom/calendar", "custom/mail", "clock", "custom/discord", "custom/youtube"],
   "modules-right": [
     "group/tray-expander",
-    "custom/university", 
     "bluetooth",
     "network",
     "pulseaudio",
@@ -47,28 +46,23 @@
   },
   "custom/discord": {
     "format": "   ",
-    "on-click": "chromium --app=chrome://version --user-data-dir=/home/donati/.config/chromium-profiles/discord/",
+    "on-click": "chromium --app=chrome://version --user-data-dir=$HOME/.config/chromium-profiles/discord/",
     "tooltip-format": "Discord"
   },
   "custom/mail": {
     "format": "   ",
-    "on-click": "chromium --app=chrome://version --user-data-dir=/home/donati/.config/chromium-profiles/proton/",
+    "on-click": "chromium --app=chrome://version --user-data-dir=$HOME/.config/chromium-profiles/proton/",
     "tooltip-format": "Proton Mail"
   },
   "custom/calendar": {
     "format": "   ",
-    "on-click": "chromium --app=chrome://version --user-data-dir=/home/donati/.config/chromium-profiles/proton/",
+    "on-click": "chromium --app=chrome://version --user-data-dir=$HOME/.config/chromium-profiles/proton/",
     "tooltip-format": "Proton Calendar"
   },
   "custom/youtube": {
     "format": "   ",
-    "on-click": "chromium --app=https://youtube.com --user-data-dir=/home/donati/.config/chromium-profiles/youtube/",
+    "on-click": "chromium --app=https://youtube.com --user-data-dir=$HOME/.config/chromium-profiles/youtube/",
     "tooltip-format": "Youtube"
-  },
-  "custom/university": {
-    "format": "   ",
-    "on-click": "~/.local/bin/system",
-    "tooltip-format": "University menu"
   },
   "cpu": {
     "interval": 5,
@@ -103,11 +97,12 @@
       "default": ["󰁺", "󰁻", "󰁼", "󰁽", "󰁾", "󰁿", "󰂀", "󰂁", "󰂂", "󰁹"]
     },
     "format-full": "󰂅",
-    "tooltip-format-discharging": "{power:>1.0f}W↓ {capacity}%",
-    "tooltip-format-charging": "{power:>1.0f}W↑ {capacity}%",
+    "format-time": "{H}h {M}m",
+    "tooltip-format-discharging": "{power:>1.0f}W↓ | {capacity}% | {time} left",
+    "tooltip-format-charging": "{power:>1.0f}W↑ | {capacity}% | {time} to full",
     "interval": 5,
-    "on-click": "omarchy-menu power",
-    "on-click-right": "notify-send -u low \"$(omarchy-battery-status)\"",
+    "on-click": "~/.local/bin/battery-profile",
+    // "on-click-right": "notify-send -u low \"$(battery-status)\"",
     "states": {
       "warning": 20,
       "critical": 10
@@ -124,7 +119,7 @@
   },
   "pulseaudio": {
     "format": "{icon}",
-    "on-click": "omarchy-launch-audio",
+    "on-click": "alacritty -e wiremix",
     "on-click-right": "pamixer -t",
     "tooltip-format": "Playing at {volume}%",
     "scroll-step": 5,

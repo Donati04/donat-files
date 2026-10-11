@@ -1,0 +1,16 @@
+#!/bin/bash
+
+profiles=$(
+  powerprofilesctl list |
+    awk '/^\s*[* ]\s*[a-zA-Z0-9-]+:$/ {
+      gsub(/^[*[:space:]]+|:$/, "")
+      print
+    }'
+)
+
+chosen=$(
+  printf '%s\n' "$profiles" |
+    rofi -dmenu -p "Power Profiles" -theme ~/.config/rofi/battery.rasi
+)
+
+[[ -n "$chosen" ]] && powerprofilesctl set "$chosen"

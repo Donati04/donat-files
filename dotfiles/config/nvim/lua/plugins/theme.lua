@@ -1,1 +1,1 @@
-/home/donati/.config/theme/neovim.lua
+../../../theme/neovim.lua

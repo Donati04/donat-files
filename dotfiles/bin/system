@@ -10,5 +10,5 @@ case "$chosen" in
   hyprlock &
   systemctl suspend
   ;;
-*"Update"*) sudo pacman -Qe ;;
+*"Update"*) sudo pacman -Syu ;;
 esac
