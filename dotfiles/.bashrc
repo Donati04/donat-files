@@ -54,7 +54,7 @@ __prompt_dir() {
       truncated=$(echo "$rel" | awk -F/ '{
                 n=NF; if(n>2){printf "…/%s/%s", $(n-1), $n} else {print}
             }')
-      printf '\[\033[1;36m\]%s/%s\[\033[0m\]/%s ' "$repo_name" "$truncated"
+      printf '\[\033[1;36m\]%s/%s\[\033[0m\]' "$repo_name" "$truncated"
     else
       printf '\[\033[1;36m\]%s\[\033[0m\] ' "$repo_name"
     fi

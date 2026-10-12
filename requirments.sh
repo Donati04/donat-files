@@ -117,7 +117,7 @@ pacman_apps=(
   'bolt'
   'bluetui'
   'pamixer'
-  'network-manager-applet'
+  #'network-manager-applet'
   # 'pavucontrol'
   'gnome-calculator'
 
