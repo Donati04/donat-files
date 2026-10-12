@@ -6,6 +6,8 @@ for directory in alacritty bash btop fastfetch hypr mako nvim rofi swayosd theme
   ln -sT "$repo_dir/dotfiles/config/$directory" "$HOME/.config/$directory"
 done
 
+mkdir -p "$HOME/.local/share"
+mkdir -p "$HOME/.local/bin"
 ln -sT "$repo_dir/dotfiles/config/mimeapps.list" "$HOME/.config/mimeapps.list"
 ln -sT "$repo_dir/dotfiles/.bashrc" "$HOME/.bashrc"
 
