@@ -43,6 +43,14 @@ hl.bind(
 )
 
 -- ===== Screenshot / registrazione (hyprshot) =====
+hl.layer_rule({
+	name = "selezione-senza-animazioni",
+	match = { namespace = "^(selection|hyprpicker)$" },
+	no_anim = true,
+	dim_around = false,
+	blur = false,
+})
+
 hl.bind("PRINT", hl.dsp.exec_cmd("hyprshot -m region"))
 hl.bind("ALT + PRINT", hl.dsp.exec_cmd("hyprshot -m output")) -- NOTA: screen recording va gestito con wf-recorder, non incluso qui
 hl.bind(mainMod .. " + PRINT", hl.dsp.exec_cmd("hyprpicker -a")) -- color picker

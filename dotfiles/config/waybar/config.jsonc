@@ -46,17 +46,17 @@
   },
   "custom/discord": {
     "format": "   ",
-    "on-click": "chromium --app=chrome://version --user-data-dir=$HOME/.config/chromium-profiles/discord/",
+    "on-click": "chromium --app=https://discord.com/channels/@me --user-data-dir=$HOME/.config/chromium-profiles/discord/",
     "tooltip-format": "Discord"
   },
   "custom/mail": {
     "format": "   ",
-    "on-click": "chromium --app=chrome://version --user-data-dir=$HOME/.config/chromium-profiles/proton/",
+    "on-click": "chromium --app=https://mail.proton.me/u/1/inbox --user-data-dir=$HOME/.config/chromium-profiles/proton/",
     "tooltip-format": "Proton Mail"
   },
   "custom/calendar": {
     "format": "   ",
-    "on-click": "chromium --app=chrome://version --user-data-dir=$HOME/.config/chromium-profiles/proton/",
+    "on-click": "chromium --app=https://calendar.proton.me/u/1/ --user-data-dir=$HOME/.config/chromium-profiles/proton/",
     "tooltip-format": "Proton Calendar"
   },
   "custom/youtube": {
@@ -67,7 +67,7 @@
   "cpu": {
     "interval": 5,
     "format": "󰍛",
-    "on-click": "alacritty -e btop"
+    "on-click": "alacritty --class tui -e btop"
   },
   "clock": {
     "format": "{:L%A %H:%M}",
@@ -75,17 +75,17 @@
     "tooltip": false,
   },
   "network": {
-    "format-icons": ["  󰤯", "  󰤟", "  󰤢", "  󰤥", "  󰤨"],
+    "format-icons": ["󰤯", "󰤟", "󰤢", "󰤥", "󰤨"],
     "format": "{icon}",
     "format-wifi": "{icon}",
-    "format-ethernet": "  󰀂",
-    "format-disconnected": "  󰤮",
+    "format-ethernet": "󰀂",
+    "format-disconnected": "󰤮",
     "tooltip-format-wifi": "{essid} ({frequency} GHz)",
     "tooltip-format-ethernet": "Connected",
     "tooltip-format-disconnected": "Disconnected",
     "interval": 3,
     "spacing": 1,
-    "on-click": "alacritty -e impala"
+    "on-click": "alacritty --class tui -e impala"
   },
   "battery": {
     "format": "{capacity}% {icon}",
@@ -115,11 +115,11 @@
     "format-connected": "󰂱",
     "format-no-controller": "",
     "tooltip-format": "Devices connected: {num_connections}",
-    "on-click": "alacritty -e bluetui"
+    "on-click": "alacritty --class tui -e bluetui"
   },
   "pulseaudio": {
     "format": "{icon}",
-    "on-click": "alacritty -e wiremix",
+    "on-click": "alacritty --class tui -e wiremix",
     "on-click-right": "pamixer -t",
     "tooltip-format": "Playing at {volume}%",
     "scroll-step": 5,

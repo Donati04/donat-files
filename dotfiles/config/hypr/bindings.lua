@@ -2,7 +2,7 @@
 -- Bind per lanciare le app principali.
 
 local terminal = "alacritty"
-local fileManager = "nautilus"
+local fileManager = "nautilus --new-window"
 local browser = "firefox"
 
 local mainMod = "SUPER"

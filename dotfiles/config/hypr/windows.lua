@@ -26,5 +26,19 @@ hl.window_rule({
 hl.window_rule({
 	name = "default-opacity",
 	match = { class = ".*" },
-	opacity = "0.985 0.96",
+	opacity = "1.0 1.0",
+})
+
+hl.window_rule({
+	match = { class = "^(org.gnome.Evince|org.gnome.Calculator)$" },
+	float = true,
+	size = { 800, 600 },
+	center = true,
+})
+
+hl.window_rule({
+	match = { class = "^tui$" },
+	float = true,
+	size = { 900, 700 },
+	center = true,
 })
